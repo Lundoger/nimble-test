@@ -1,5 +1,5 @@
-import ContactsList from "./contacts-list/ContactsList"
-import CreateContact from "./create-contact/CreateContact"
+import ContactsList from './contacts-list/ContactsList';
+import CreateContact from './create-contact/CreateContact';
 
 const MainPage = () => {
   return (
@@ -11,7 +11,7 @@ const MainPage = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default MainPage
+export default MainPage;

@@ -1,11 +1,13 @@
-import React from "react"
+import React from 'react';
 
 const Header = () => {
   return (
-    <header className="h-[60px] max-md:h-[40px] bg-slate-400">
-      <div className="container flex justify-center items-center h-full">HEADER</div>
+    <header className="bg-violet h-[60px] max-md:h-[40px]">
+      <div className="container flex h-full items-center justify-center">
+        HEADER
+      </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
