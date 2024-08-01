@@ -1,11 +1,11 @@
-import React from "react"
+import React from 'react';
 
 const ContactsList = () => {
   return (
     <ul className="">
-      <li>item</li>
+      <li></li>
     </ul>
-  )
-}
+  );
+};
 
-export default ContactsList
+export default ContactsList;

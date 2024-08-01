@@ -1,3 +1,7 @@
-import { setSelectedCurrency } from "@/store/slices/testSlice"
+import {
+  setFirstName,
+  setLastName,
+  setEmail,
+} from '@/store/slices/createContactSlice';
 
-export { setSelectedCurrency }
+export { setFirstName, setLastName, setEmail };

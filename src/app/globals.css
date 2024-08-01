@@ -4,6 +4,7 @@
 
 :root {
   --bgBlack: #131212;
+  --violet: #9d38e6;
 }
 
 body {
@@ -36,32 +37,32 @@ body {
 
 @layer components {
   .container {
-    @apply max-w-[1280px] px-[15px] m-auto;
+    @apply m-auto max-w-[1280px] px-[15px];
   }
   .basic-transition {
-    @apply transition-all duration-300 ease-in;
+    @apply transition-all duration-200 ease-in;
   }
 }
 
-input[type="password"]::-ms-reveal,
-input[type="password"]::-ms-clear {
+input[type='password']::-ms-reveal,
+input[type='password']::-ms-clear {
   display: none;
 }
 
-input[type="password"]::-webkit-textfield-decoration-container {
+input[type='password']::-webkit-textfield-decoration-container {
   display: none;
 }
 
-input[type="password"]::-webkit-input-placeholder {
+input[type='password']::-webkit-input-placeholder {
   background: none;
   -webkit-appearance: none;
 }
 
-input[type="password"]::-moz-placeholder {
+input[type='password']::-moz-placeholder {
   background: none;
 }
 
-input[type="password"]::-ms-input-placeholder {
+input[type='password']::-ms-input-placeholder {
   background: none;
 }
 
