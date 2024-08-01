@@ -1,14 +1,17 @@
 'use client';
 
 import { Input } from '@/components/shared/input/Input';
-import React, { useRef, useState } from 'react';
+import { useActions } from '@/hooks/useActions';
+import { useAppSelector } from '@/hooks/useAppSelector';
+import { useRef } from 'react';
 
 const LastNameInput = () => {
   const inputRef = useRef<HTMLInputElement>(null);
-  const [value, setValue] = useState<string>('');
+  const lastName = useAppSelector((state) => state.createContact.lastName);
+  const { setLastName } = useActions();
 
   const handleClear = () => {
-    setValue('');
+    setLastName('');
     inputRef.current?.focus();
   };
 
@@ -16,9 +19,9 @@ const LastNameInput = () => {
     <Input
       placeholder="type your last name..."
       onClear={handleClear}
-      onChange={(e) => setValue(e.currentTarget.value)}
+      onChange={(e) => setLastName(e.currentTarget.value)}
       ref={inputRef}
-      value={value}
+      value={lastName}
       labelText="Last Name"
     />
   );

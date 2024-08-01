@@ -1,14 +1,17 @@
 'use client';
 
 import { Input } from '@/components/shared/input/Input';
-import React, { useRef, useState } from 'react';
+import { useActions } from '@/hooks/useActions';
+import { useAppSelector } from '@/hooks/useAppSelector';
+import { useRef } from 'react';
 
 const EmailInput = () => {
   const inputRef = useRef<HTMLInputElement>(null);
-  const [value, setValue] = useState<string>('');
+  const email = useAppSelector((state) => state.createContact.email);
+  const { setEmail } = useActions();
 
   const handleClear = () => {
-    setValue('');
+    setEmail('');
     inputRef.current?.focus();
   };
 
@@ -16,9 +19,9 @@ const EmailInput = () => {
     <Input
       placeholder="type your email..."
       onClear={handleClear}
-      onChange={(e) => setValue(e.currentTarget.value)}
+      onChange={(e) => setEmail(e.currentTarget.value)}
       ref={inputRef}
-      value={value}
+      value={email}
       labelText="Email"
     />
   );

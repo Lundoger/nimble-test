@@ -3,7 +3,7 @@
 import { Input } from '@/components/shared/input/Input';
 import { useActions } from '@/hooks/useActions';
 import { useAppSelector } from '@/hooks/useAppSelector';
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 
 const FirstNameInput = () => {
   const firstName = useAppSelector((state) => state.createContact.firstName);
